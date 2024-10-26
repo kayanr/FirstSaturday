@@ -17,8 +17,13 @@ public class WriteLoops {
 
         // Write a FOR loop that counts from 1 to 10.
             // calling
-            w = w + 1;
+            //w = w + 1;
             // each time through the loop
+        //***I made a correction to the code based on the WriteLoopTest
+        //***This method should count from 1 to 5 ---Kayan
+        for(int i = 1; i <= 5; i++ ){
+            w = w + 1;
+        }
 
         // this will tell the test how many times the loop executed.
         return w;
