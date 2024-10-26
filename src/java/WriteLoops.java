@@ -61,9 +61,11 @@ public class WriteLoops {
 
         // Write a FOR loop that counts down from 100 to 0.
         // calling
-        w = w + 1;
+        // w = w + 1;
         // each time through the loop
-        
+        for(int i = 100; i > 0; i-- ){
+            w = w + 1;
+        }
         return w;
     }
 
