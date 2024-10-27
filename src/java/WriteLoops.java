@@ -122,9 +122,14 @@ public class WriteLoops {
         // prints “Hello Zipcode” instead of the statement w = w + 1;
 
                 // calling
-                w = w + 1;
+                //w = w + 1;
             // each time through the inner loop
-        
+        for(int i = 5; i < 105; i++){
+           if( i > 51){
+               System.out.println("Hello Zipcode");
+
+           }
+        }
         return w;
     }
 
@@ -155,10 +160,13 @@ public class WriteLoops {
         // you need to use a .equals for two Strings.
 
             // calling
-            w = w + 1;
+           // w = w + 1;
             // each time through the inner loop
-        
-
+        while(!gpsCurrentLocation().equals("Home")){
+            driveSomeMore();
+            w = w + 1;
+        }
+        System.out.println("Honey, I’m Home!");
             return w;
     }
 
