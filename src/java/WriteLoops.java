@@ -185,9 +185,14 @@ public class WriteLoops {
         // do your while loop here
  
             // calling
-            w = w + 1;
+            //w = w + 1;
             // each time through the inner loop
-        
+        while(runningScore < highestScore){
+            runningScore = currentScore + runningScore;
+            currentScore = gameNextScore();
+            w = w + 1;
+        }
+        //return runningScore;
         return w; // >= 3;
     }
 
@@ -202,8 +207,13 @@ public class WriteLoops {
         // do your while loop here
 
             // calling
-            w = w + 1;
+            //w = w + 1;
             // each time through the inner loop
+
+           do{ runningScore = currentScore + runningScore;
+            currentScore = gameNextScore();
+            w = w + 1;
+        } while(runningScore < highestScore);
 
         return w >= 3;
     }
@@ -218,9 +228,16 @@ public class WriteLoops {
         
 
         // calling
-        w = w + 1;
+       // w = w + 1;
         // each time through the inner loop
-        
+        while(serverIsRunning()){
+            waitFor(5);
+            w = w + 1;
+        }
+        if(!serverIsRunning()){
+            sendEmergencyText("Help!", adminPhoneNumber);
+            tryServerRestart("Help!", adminPhoneNumber);
+        }
         return w;
     }
 
